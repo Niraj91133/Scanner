@@ -1,0 +1,1131 @@
+{
+  "businesses": [
+    {
+      "id": "biz-1790619469916-329",
+      "slug": "sharthak-studio-200-1",
+      "name": "Sharthak Studio",
+      "tagline": "Excellence in Customer Satisfaction & Premium Service",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Road",
+      "googleReviewLink": "https://www.google.com/search?sca_esv=c2d1ccc686b89df9&biw=1920&bih=945&sxsrf=APpeQns6v28XAkQRO3rxzXqsPZqUm1uQsQ:1790615045017&kgmid=/g/11zk4nnvpp&q=Sharthak+Studio&shem=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie&shndl=30&source=sh/x/loc/uni/m1/1&kgs=79247ff235ee77f9&utm_source=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie,sh/x/loc/uni/m1/1",
+      "placeId": "",
+      "services": [
+        "High Quality Service Delivery",
+        "Expert Consultation & Advice",
+        "Fast & Reliable Support",
+        "Customized Client Solutions",
+        "Hassle-Free Experience"
+      ],
+      "targetKeywords": [
+        "best Professional Services & Business in your city",
+        "High Quality Service Delivery in your city",
+        "Expert Consultation & Advice in your city",
+        "top rated Professional Services & Business near me",
+        "best Sharthak Studio your city",
+        "affordable Professional Services & Business in your city"
+      ],
+      "usps": [
+        "Experienced Industry Experts",
+        "Prompt & On-Time Execution",
+        "Transparent Pricing",
+        "100% Customer Satisfaction Guaranteed"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T18:17:49.916Z",
+      "scanCount": 0,
+      "reviewClickCount": 0
+    },
+    {
+      "id": "biz-1790619467068-855",
+      "slug": "sharthak-studio-200",
+      "name": "Sharthak Studio",
+      "tagline": "Excellence in Customer Satisfaction & Premium Service",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Road",
+      "city": "",
+      "googleReviewLink": "https://www.google.com/search?sca_esv=c2d1ccc686b89df9&biw=1920&bih=945&sxsrf=APpeQns6v28XAkQRO3rxzXqsPZqUm1uQsQ:1790615045017&kgmid=/g/11zk4nnvpp&q=Sharthak+Studio&shem=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie&shndl=30&source=sh/x/loc/uni/m1/1&kgs=79247ff235ee77f9&utm_source=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie,sh/x/loc/uni/m1/1",
+      "placeId": "",
+      "services": [
+        "High Quality Service Delivery",
+        "Expert Consultation & Advice",
+        "Fast & Reliable Support",
+        "Customized Client Solutions",
+        "Hassle-Free Experience"
+      ],
+      "targetKeywords": [
+        "best Professional Services & Business in your city",
+        "High Quality Service Delivery in your city",
+        "Expert Consultation & Advice in your city",
+        "top rated Professional Services & Business near me",
+        "best Sharthak Studio your city",
+        "affordable Professional Services & Business in your city"
+      ],
+      "seoPlan": {
+        "businessName": "Sharthak Studio",
+        "category": "Professional Services & Business",
+        "detectedCity": "your city",
+        "seoScore": "94/100",
+        "keywordCategories": [
+          {
+            "type": "location",
+            "title": "📍 Local High-Intent Keywords (Rank on Google Maps 3-Pack)",
+            "description": "These keywords trigger Google Maps local pack when nearby customers search.",
+            "keywords": [
+              "best Professional Services & Business in your city",
+              "Professional Services & Business near me",
+              "top rated Professional Services & Business in your city",
+              "affordable Professional Services & Business in your city",
+              "best Sharthak Studio your city"
+            ]
+          },
+          {
+            "type": "service",
+            "title": "🎯 High-Converting Service Keywords (Customer Buying Intent)",
+            "description": "Keywords people search right before booking a service.",
+            "keywords": [
+              "High Quality Service Delivery in your city",
+              "Expert Consultation & Advice in your city",
+              "Fast & Reliable Support in your city",
+              "Customized Client Solutions in your city",
+              "Hassle-Free Experience in your city",
+              "best High Quality Service Delivery near me",
+              "best Expert Consultation & Advice near me",
+              "best Fast & Reliable Support near me"
+            ]
+          },
+          {
+            "type": "reputation",
+            "title": "⭐ 5-Star Trust & Review Keywords (Natural Review Blend)",
+            "description": "Blended naturally inside customer reviews to boost trust signals.",
+            "keywords": [
+              "experienced specialist staff",
+              "painless and hygienic treatment",
+              "100% genuine and honest service",
+              "pocket friendly and affordable pricing",
+              "highly recommended in your city"
+            ]
+          },
+          {
+            "type": "longtail",
+            "title": "🚀 Long-Tail Local Queries (Low Competition, High Ranking)",
+            "description": "Specific questions and detailed queries that rank rapidly.",
+            "keywords": [
+              "which is the best Professional Services & Business in your city",
+              "trusted Professional Services & Business with 5 star reviews",
+              "famous Professional Services & Business in your city"
+            ]
+          }
+        ],
+        "recommendedSelection": [
+          "best Professional Services & Business in your city",
+          "High Quality Service Delivery in your city",
+          "Expert Consultation & Advice in your city",
+          "top rated Professional Services & Business near me",
+          "best Sharthak Studio your city",
+          "affordable Professional Services & Business in your city"
+        ]
+      },
+      "usps": [
+        "Experienced Industry Experts",
+        "Prompt & On-Time Execution",
+        "Transparent Pricing",
+        "100% Customer Satisfaction Guaranteed"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T18:17:47.068Z",
+      "scanCount": 0,
+      "reviewClickCount": 0,
+      "autoDetected": true,
+      "scrapedUrl": "https://share.google/eaibRuVsw4LnyUe0q"
+    },
+    {
+      "id": "biz-1790617222609-546",
+      "slug": "sharthak-studio-160-1",
+      "name": "Sharthak Studio",
+      "tagline": "Excellence in Customer Satisfaction & Premium Service",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Road",
+      "googleReviewLink": "https://www.google.com/search?sca_esv=c2d1ccc686b89df9&biw=1920&bih=945&sxsrf=APpeQns6v28XAkQRO3rxzXqsPZqUm1uQsQ:1790615045017&kgmid=/g/11zk4nnvpp&q=Sharthak+Studio&shem=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie&shndl=30&source=sh/x/loc/uni/m1/1&kgs=79247ff235ee77f9&utm_source=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie,sh/x/loc/uni/m1/1",
+      "placeId": "",
+      "services": [
+        "High Quality Service Delivery",
+        "Expert Consultation & Advice",
+        "Fast & Reliable Support",
+        "Customized Client Solutions",
+        "Hassle-Free Experience"
+      ],
+      "targetKeywords": [
+        "best Professional Services & Business in your city",
+        "High Quality Service Delivery in your city",
+        "Expert Consultation & Advice in your city",
+        "top rated Professional Services & Business near me",
+        "best Sharthak Studio your city",
+        "affordable Professional Services & Business in your city"
+      ],
+      "usps": [
+        "Experienced Industry Experts",
+        "Prompt & On-Time Execution",
+        "Transparent Pricing",
+        "100% Customer Satisfaction Guaranteed"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:40:22.609Z",
+      "scanCount": 0,
+      "reviewClickCount": 0
+    },
+    {
+      "id": "biz-1790617212623-313",
+      "slug": "sharthak-studio-160",
+      "name": "Sharthak Studio",
+      "tagline": "Excellence in Customer Satisfaction & Premium Service",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Road",
+      "city": "",
+      "googleReviewLink": "https://www.google.com/search?sca_esv=c2d1ccc686b89df9&biw=1920&bih=945&sxsrf=APpeQns6v28XAkQRO3rxzXqsPZqUm1uQsQ:1790615045017&kgmid=/g/11zk4nnvpp&q=Sharthak+Studio&shem=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie&shndl=30&source=sh/x/loc/uni/m1/1&kgs=79247ff235ee77f9&utm_source=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie,sh/x/loc/uni/m1/1",
+      "placeId": "",
+      "services": [
+        "High Quality Service Delivery",
+        "Expert Consultation & Advice",
+        "Fast & Reliable Support",
+        "Customized Client Solutions",
+        "Hassle-Free Experience"
+      ],
+      "targetKeywords": [
+        "best Professional Services & Business in your city",
+        "High Quality Service Delivery in your city",
+        "Expert Consultation & Advice in your city",
+        "top rated Professional Services & Business near me",
+        "best Sharthak Studio your city",
+        "affordable Professional Services & Business in your city"
+      ],
+      "seoPlan": {
+        "businessName": "Sharthak Studio",
+        "category": "Professional Services & Business",
+        "detectedCity": "your city",
+        "seoScore": "94/100",
+        "keywordCategories": [
+          {
+            "type": "location",
+            "title": "📍 Local High-Intent Keywords (Rank on Google Maps 3-Pack)",
+            "description": "These keywords trigger Google Maps local pack when nearby customers search.",
+            "keywords": [
+              "best Professional Services & Business in your city",
+              "Professional Services & Business near me",
+              "top rated Professional Services & Business in your city",
+              "affordable Professional Services & Business in your city",
+              "best Sharthak Studio your city"
+            ]
+          },
+          {
+            "type": "service",
+            "title": "🎯 High-Converting Service Keywords (Customer Buying Intent)",
+            "description": "Keywords people search right before booking a service.",
+            "keywords": [
+              "High Quality Service Delivery in your city",
+              "Expert Consultation & Advice in your city",
+              "Fast & Reliable Support in your city",
+              "Customized Client Solutions in your city",
+              "Hassle-Free Experience in your city",
+              "best High Quality Service Delivery near me",
+              "best Expert Consultation & Advice near me",
+              "best Fast & Reliable Support near me"
+            ]
+          },
+          {
+            "type": "reputation",
+            "title": "⭐ 5-Star Trust & Review Keywords (Natural Review Blend)",
+            "description": "Blended naturally inside customer reviews to boost trust signals.",
+            "keywords": [
+              "experienced specialist staff",
+              "painless and hygienic treatment",
+              "100% genuine and honest service",
+              "pocket friendly and affordable pricing",
+              "highly recommended in your city"
+            ]
+          },
+          {
+            "type": "longtail",
+            "title": "🚀 Long-Tail Local Queries (Low Competition, High Ranking)",
+            "description": "Specific questions and detailed queries that rank rapidly.",
+            "keywords": [
+              "which is the best Professional Services & Business in your city",
+              "trusted Professional Services & Business with 5 star reviews",
+              "famous Professional Services & Business in your city"
+            ]
+          }
+        ],
+        "recommendedSelection": [
+          "best Professional Services & Business in your city",
+          "High Quality Service Delivery in your city",
+          "Expert Consultation & Advice in your city",
+          "top rated Professional Services & Business near me",
+          "best Sharthak Studio your city",
+          "affordable Professional Services & Business in your city"
+        ]
+      },
+      "usps": [
+        "Experienced Industry Experts",
+        "Prompt & On-Time Execution",
+        "Transparent Pricing",
+        "100% Customer Satisfaction Guaranteed"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:40:12.626Z",
+      "scanCount": 0,
+      "reviewClickCount": 0,
+      "autoDetected": true,
+      "scrapedUrl": "https://share.google/eaibRuVsw4LnyUe0q"
+    },
+    {
+      "id": "biz-1790616251949-941",
+      "slug": "sharthak-studio-179-1",
+      "name": "Sharthak Studio",
+      "tagline": "Excellence in Customer Satisfaction & Premium Service",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Road",
+      "googleReviewLink": "https://www.google.com/search?sca_esv=c2d1ccc686b89df9&biw=1920&bih=945&sxsrf=APpeQns6v28XAkQRO3rxzXqsPZqUm1uQsQ:1790615045017&kgmid=/g/11zk4nnvpp&q=Sharthak+Studio&shem=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie&shndl=30&source=sh/x/loc/uni/m1/1&kgs=79247ff235ee77f9&utm_source=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie,sh/x/loc/uni/m1/1",
+      "placeId": "",
+      "services": [
+        "High Quality Service Delivery",
+        "Expert Consultation & Advice",
+        "Fast & Reliable Support",
+        "Customized Client Solutions",
+        "Hassle-Free Experience"
+      ],
+      "targetKeywords": [
+        "best Professional Services & Business in your city",
+        "High Quality Service Delivery in your city",
+        "Expert Consultation & Advice in your city",
+        "top rated Professional Services & Business near me",
+        "best Sharthak Studio your city",
+        "affordable Professional Services & Business in your city"
+      ],
+      "usps": [
+        "Experienced Industry Experts",
+        "Prompt & On-Time Execution",
+        "Transparent Pricing",
+        "100% Customer Satisfaction Guaranteed"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:24:11.949Z",
+      "scanCount": 0,
+      "reviewClickCount": 0
+    },
+    {
+      "id": "biz-1790616238239-569",
+      "slug": "sharthak-studio-179",
+      "name": "Sharthak Studio",
+      "tagline": "Excellence in Customer Satisfaction & Premium Service",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Road",
+      "city": "",
+      "googleReviewLink": "https://www.google.com/search?sca_esv=c2d1ccc686b89df9&biw=1920&bih=945&sxsrf=APpeQns6v28XAkQRO3rxzXqsPZqUm1uQsQ:1790615045017&kgmid=/g/11zk4nnvpp&q=Sharthak+Studio&shem=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie&shndl=30&source=sh/x/loc/uni/m1/1&kgs=79247ff235ee77f9&utm_source=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie,sh/x/loc/uni/m1/1",
+      "placeId": "",
+      "services": [
+        "High Quality Service Delivery",
+        "Expert Consultation & Advice",
+        "Fast & Reliable Support",
+        "Customized Client Solutions",
+        "Hassle-Free Experience"
+      ],
+      "targetKeywords": [
+        "best Professional Services & Business in your city",
+        "High Quality Service Delivery in your city",
+        "Expert Consultation & Advice in your city",
+        "top rated Professional Services & Business near me",
+        "best Sharthak Studio your city",
+        "affordable Professional Services & Business in your city"
+      ],
+      "seoPlan": {
+        "businessName": "Sharthak Studio",
+        "category": "Professional Services & Business",
+        "detectedCity": "your city",
+        "seoScore": "94/100",
+        "keywordCategories": [
+          {
+            "type": "location",
+            "title": "📍 Local High-Intent Keywords (Rank on Google Maps 3-Pack)",
+            "description": "These keywords trigger Google Maps local pack when nearby customers search.",
+            "keywords": [
+              "best Professional Services & Business in your city",
+              "Professional Services & Business near me",
+              "top rated Professional Services & Business in your city",
+              "affordable Professional Services & Business in your city",
+              "best Sharthak Studio your city"
+            ]
+          },
+          {
+            "type": "service",
+            "title": "🎯 High-Converting Service Keywords (Customer Buying Intent)",
+            "description": "Keywords people search right before booking a service.",
+            "keywords": [
+              "High Quality Service Delivery in your city",
+              "Expert Consultation & Advice in your city",
+              "Fast & Reliable Support in your city",
+              "Customized Client Solutions in your city",
+              "Hassle-Free Experience in your city",
+              "best High Quality Service Delivery near me",
+              "best Expert Consultation & Advice near me",
+              "best Fast & Reliable Support near me"
+            ]
+          },
+          {
+            "type": "reputation",
+            "title": "⭐ 5-Star Trust & Review Keywords (Natural Review Blend)",
+            "description": "Blended naturally inside customer reviews to boost trust signals.",
+            "keywords": [
+              "experienced specialist staff",
+              "painless and hygienic treatment",
+              "100% genuine and honest service",
+              "pocket friendly and affordable pricing",
+              "highly recommended in your city"
+            ]
+          },
+          {
+            "type": "longtail",
+            "title": "🚀 Long-Tail Local Queries (Low Competition, High Ranking)",
+            "description": "Specific questions and detailed queries that rank rapidly.",
+            "keywords": [
+              "which is the best Professional Services & Business in your city",
+              "trusted Professional Services & Business with 5 star reviews",
+              "famous Professional Services & Business in your city"
+            ]
+          }
+        ],
+        "recommendedSelection": [
+          "best Professional Services & Business in your city",
+          "High Quality Service Delivery in your city",
+          "Expert Consultation & Advice in your city",
+          "top rated Professional Services & Business near me",
+          "best Sharthak Studio your city",
+          "affordable Professional Services & Business in your city"
+        ]
+      },
+      "usps": [
+        "Experienced Industry Experts",
+        "Prompt & On-Time Execution",
+        "Transparent Pricing",
+        "100% Customer Satisfaction Guaranteed"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:23:58.239Z",
+      "scanCount": 0,
+      "reviewClickCount": 0,
+      "autoDetected": true,
+      "scrapedUrl": "https://share.google/eaibRuVsw4LnyUe0q"
+    },
+    {
+      "id": "biz-1790616163087-400",
+      "slug": "glamour-touch-luxury-unisex-salon-south-delhi-573",
+      "name": "Glamour Touch Luxury Unisex Salon South Delhi",
+      "tagline": "Premium Hair Styling, Skin Glow & Bridal Studio",
+      "category": "Luxury Unisex Salon & Beauty Spa",
+      "logo": "✂️",
+      "phone": "+91 98765 43210",
+      "address": "Main Market, Delhi",
+      "city": "Delhi",
+      "googleReviewLink": "https://www.google.com/maps/search/?api=1&query=Glamour%20Touch%20Luxury%20Unisex%20Salon%20South%20Delhi%20Delhi",
+      "placeId": "",
+      "services": [
+        "Keratin & Hair Botox Treatment",
+        "Hydra Facial & Skin Glow",
+        "Bridal & Party Makeup",
+        "Hair Spa & Smoothing",
+        "Global Hair Coloring & Highlights",
+        "Beard Grooming & Styling"
+      ],
+      "targetKeywords": [
+        "best Luxury Unisex Salon & Beauty Spa in Delhi",
+        "Keratin & Hair Botox Treatment in Delhi",
+        "Hydra Facial & Skin Glow in Delhi",
+        "top rated Luxury Unisex Salon & Beauty Spa near me",
+        "best Glamour Touch Luxury Unisex Salon South Delhi Delhi",
+        "affordable Luxury Unisex Salon & Beauty Spa in Delhi"
+      ],
+      "seoPlan": {
+        "businessName": "Glamour Touch Luxury Unisex Salon South Delhi",
+        "category": "Luxury Unisex Salon & Beauty Spa",
+        "detectedCity": "Delhi",
+        "seoScore": "94/100",
+        "keywordCategories": [
+          {
+            "type": "location",
+            "title": "📍 Local High-Intent Keywords (Rank on Google Maps 3-Pack)",
+            "description": "These keywords trigger Google Maps local pack when nearby customers search.",
+            "keywords": [
+              "best Luxury Unisex Salon & Beauty Spa in Delhi",
+              "Luxury Unisex Salon & Beauty Spa near me",
+              "top rated Luxury Unisex Salon & Beauty Spa in Delhi",
+              "affordable Luxury Unisex Salon & Beauty Spa in Delhi",
+              "best Glamour Touch Luxury Unisex Salon South Delhi Delhi"
+            ]
+          },
+          {
+            "type": "service",
+            "title": "🎯 High-Converting Service Keywords (Customer Buying Intent)",
+            "description": "Keywords people search right before booking a service.",
+            "keywords": [
+              "Keratin & Hair Botox Treatment in Delhi",
+              "Hydra Facial & Skin Glow in Delhi",
+              "Bridal & Party Makeup in Delhi",
+              "Hair Spa & Smoothing in Delhi",
+              "Global Hair Coloring & Highlights in Delhi",
+              "best Keratin & Hair Botox Treatment near me",
+              "best Hydra Facial & Skin Glow near me",
+              "best Bridal & Party Makeup near me"
+            ]
+          },
+          {
+            "type": "reputation",
+            "title": "⭐ 5-Star Trust & Review Keywords (Natural Review Blend)",
+            "description": "Blended naturally inside customer reviews to boost trust signals.",
+            "keywords": [
+              "experienced specialist staff",
+              "painless and hygienic treatment",
+              "100% genuine and honest service",
+              "pocket friendly and affordable pricing",
+              "highly recommended in Delhi"
+            ]
+          },
+          {
+            "type": "longtail",
+            "title": "🚀 Long-Tail Local Queries (Low Competition, High Ranking)",
+            "description": "Specific questions and detailed queries that rank rapidly.",
+            "keywords": [
+              "which is the best Luxury Unisex Salon & Beauty Spa in Delhi",
+              "trusted Luxury Unisex Salon & Beauty Spa with 5 star reviews",
+              "famous Luxury Unisex Salon & Beauty Spa in Delhi"
+            ]
+          }
+        ],
+        "recommendedSelection": [
+          "best Luxury Unisex Salon & Beauty Spa in Delhi",
+          "Keratin & Hair Botox Treatment in Delhi",
+          "Hydra Facial & Skin Glow in Delhi",
+          "top rated Luxury Unisex Salon & Beauty Spa near me",
+          "best Glamour Touch Luxury Unisex Salon South Delhi Delhi",
+          "affordable Luxury Unisex Salon & Beauty Spa in Delhi"
+        ]
+      },
+      "usps": [
+        "Luxury Aesthetic Ambience",
+        "Certified Celebrity Stylists",
+        "100% Genuine Branded Products",
+        "Complimentary Beverages",
+        "VIP Pampering Service"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#ec4899",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:22:43.087Z",
+      "scanCount": 0,
+      "reviewClickCount": 0,
+      "autoDetected": true,
+      "scrapedUrl": null
+    },
+    {
+      "id": "biz-1790615925404-368",
+      "slug": "sharthak-studio-267-1",
+      "name": "Sharthak Studio",
+      "tagline": "Excellence in Customer Satisfaction & Premium Service",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Road",
+      "googleReviewLink": "https://www.google.com/search?sca_esv=c2d1ccc686b89df9&biw=1920&bih=945&sxsrf=APpeQns6v28XAkQRO3rxzXqsPZqUm1uQsQ:1790615045017&kgmid=/g/11zk4nnvpp&q=Sharthak+Studio&shem=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie&shndl=30&source=sh/x/loc/uni/m1/1&kgs=79247ff235ee77f9&utm_source=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie,sh/x/loc/uni/m1/1",
+      "placeId": "",
+      "services": [
+        "High Quality Service Delivery",
+        "Expert Consultation & Advice",
+        "Fast & Reliable Support",
+        "Customized Client Solutions",
+        "Hassle-Free Experience"
+      ],
+      "targetKeywords": [
+        "best professional service in town",
+        "High Quality Service Delivery in town",
+        "Expert Consultation & Advice in town",
+        "best Sharthak Studio",
+        "top rated company in town",
+        "honest and dependable staff"
+      ],
+      "usps": [
+        "Experienced Industry Experts",
+        "Prompt & On-Time Execution",
+        "Transparent Pricing",
+        "100% Customer Satisfaction Guaranteed"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:18:45.404Z",
+      "scanCount": 0,
+      "reviewClickCount": 0
+    },
+    {
+      "id": "biz-1790615921991-754",
+      "slug": "sharthak-studio-267",
+      "name": "Sharthak Studio",
+      "tagline": "Excellence in Customer Satisfaction & Premium Service",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Road",
+      "city": "",
+      "googleReviewLink": "https://www.google.com/search?sca_esv=c2d1ccc686b89df9&biw=1920&bih=945&sxsrf=APpeQns6v28XAkQRO3rxzXqsPZqUm1uQsQ:1790615045017&kgmid=/g/11zk4nnvpp&q=Sharthak+Studio&shem=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie&shndl=30&source=sh/x/loc/uni/m1/1&kgs=79247ff235ee77f9&utm_source=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie,sh/x/loc/uni/m1/1",
+      "placeId": "",
+      "services": [
+        "High Quality Service Delivery",
+        "Expert Consultation & Advice",
+        "Fast & Reliable Support",
+        "Customized Client Solutions",
+        "Hassle-Free Experience"
+      ],
+      "targetKeywords": [
+        "best professional service in town",
+        "High Quality Service Delivery in town",
+        "Expert Consultation & Advice in town",
+        "best Sharthak Studio",
+        "top rated company in town",
+        "honest and dependable staff"
+      ],
+      "usps": [
+        "Experienced Industry Experts",
+        "Prompt & On-Time Execution",
+        "Transparent Pricing",
+        "100% Customer Satisfaction Guaranteed"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:18:41.991Z",
+      "scanCount": 0,
+      "reviewClickCount": 0,
+      "autoDetected": true,
+      "scrapedUrl": "https://share.google/eaibRuVsw4LnyUe0q"
+    },
+    {
+      "id": "biz-1790615814453-42",
+      "slug": "google-search-142",
+      "name": "Google Search",
+      "tagline": "Excellence in Customer Satisfaction & Premium Service",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Road",
+      "city": "",
+      "googleReviewLink": "https://www.google.com/search?sca_esv=c2d1ccc686b89df9&biw=1920&bih=945&sxsrf=APpeQns6v28XAkQRO3rxzXqsPZqUm1uQsQ:1790615045017&kgmid=/g/11zk4nnvpp&q=Sharthak+Studio&shem=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie&shndl=30&source=sh/x/loc/uni/m1/1&kgs=79247ff235ee77f9&utm_source=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie,sh/x/loc/uni/m1/1",
+      "placeId": "",
+      "services": [
+        "High Quality Service Delivery",
+        "Expert Consultation & Advice",
+        "Fast & Reliable Support",
+        "Customized Client Solutions",
+        "Hassle-Free Experience"
+      ],
+      "targetKeywords": [
+        "best professional service in town",
+        "High Quality Service Delivery in town",
+        "Expert Consultation & Advice in town",
+        "best Google Search",
+        "top rated company in town",
+        "honest and dependable staff"
+      ],
+      "usps": [
+        "Experienced Industry Experts",
+        "Prompt & On-Time Execution",
+        "Transparent Pricing",
+        "100% Customer Satisfaction Guaranteed"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:16:54.453Z",
+      "scanCount": 0,
+      "reviewClickCount": 0,
+      "autoDetected": true,
+      "scrapedUrl": "https://share.google/eaibRuVsw4LnyUe0q"
+    },
+    {
+      "id": "biz-1790615770275-829",
+      "slug": "google-maps-616",
+      "name": "Google Maps",
+      "tagline": "Excellence in Customer Satisfaction & Premium Service",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Road",
+      "city": "",
+      "googleReviewLink": "https://www.google.com/maps?cid=12345678&q=Glamour+Hair+Studio+Noida+Sector+18",
+      "placeId": "",
+      "services": [
+        "High Quality Service Delivery",
+        "Expert Consultation & Advice",
+        "Fast & Reliable Support",
+        "Customized Client Solutions",
+        "Hassle-Free Experience"
+      ],
+      "targetKeywords": [
+        "best professional service in town",
+        "High Quality Service Delivery in town",
+        "Expert Consultation & Advice in town",
+        "best Google Maps",
+        "top rated company in town",
+        "honest and dependable staff"
+      ],
+      "usps": [
+        "Experienced Industry Experts",
+        "Prompt & On-Time Execution",
+        "Transparent Pricing",
+        "100% Customer Satisfaction Guaranteed"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:16:10.275Z",
+      "scanCount": 0,
+      "reviewClickCount": 0,
+      "autoDetected": true,
+      "scrapedUrl": "https://maps.google.com/?cid=12345678&q=Glamour+Hair+Studio+Noida+Sector+18"
+    },
+    {
+      "id": "biz-1790615764772-532",
+      "slug": "aesthetic-dental-care-clinic-south-delhi-933",
+      "name": "Aesthetic Dental Care Clinic South Delhi",
+      "tagline": "Advanced Painless Dental Care & Smile Makeover",
+      "category": "Dental Clinic & Oral Healthcare",
+      "logo": "🦷",
+      "phone": "+91 98765 43210",
+      "address": "Main Market, Delhi",
+      "city": "Delhi",
+      "googleReviewLink": "https://www.google.com/maps/search/?api=1&query=Aesthetic%20Dental%20Care%20Clinic%20South%20Delhi%20Delhi",
+      "placeId": "",
+      "services": [
+        "Root Canal Treatment",
+        "Teeth Whitening",
+        "Dental Implants",
+        "Invisalign & Clear Braces",
+        "Teeth Cleaning & Scaling",
+        "Laser Tooth Extraction"
+      ],
+      "targetKeywords": [
+        "best dentist in Delhi",
+        "Root Canal Treatment in Delhi",
+        "Teeth Whitening in Delhi",
+        "best Aesthetic Dental Care Clinic South Delhi Delhi",
+        "painless root canal treatment in Delhi",
+        "affordable dental clinic"
+      ],
+      "usps": [
+        "Zero Pain Laser Technology",
+        "100% Sanitized & Clean Clinic",
+        "Senior Specialist Doctors",
+        "Pocket Friendly Pricing",
+        "Digital X-Ray & Diagnostics"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#0ea5e9",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:16:04.772Z",
+      "scanCount": 0,
+      "reviewClickCount": 0,
+      "autoDetected": true,
+      "scrapedUrl": null
+    },
+    {
+      "id": "biz-1790615599384-549",
+      "slug": "my-google-business-493-1",
+      "name": "My Google Business",
+      "tagline": "Quality Service & Exceptional Customer Experience",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Market",
+      "googleReviewLink": "https://share.google/eaibRuVsw4LnyUe0q",
+      "placeId": "",
+      "services": [
+        "Premium Quality Service",
+        "Expert Consultation",
+        "Fast Delivery & Turnaround",
+        "Customer Support",
+        "Customized Solutions"
+      ],
+      "targetKeywords": [
+        "best My Google Business",
+        "best My Google Business",
+        "top rated service in city",
+        "honest and professional staff",
+        "affordable prices",
+        "highly recommended"
+      ],
+      "usps": [
+        "Experienced Professionals",
+        "Prompt & Reliable Service",
+        "Affordable Pricing",
+        "100% Customer Satisfaction",
+        "Super Clean Setup"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:13:19.384Z",
+      "scanCount": 0,
+      "reviewClickCount": 0
+    },
+    {
+      "id": "biz-1790615493805-865",
+      "slug": "my-google-business-493",
+      "name": "My Google Business",
+      "tagline": "Quality Service & Exceptional Customer Experience",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Market",
+      "googleReviewLink": "https://share.google/eaibRuVsw4LnyUe0q",
+      "placeId": "",
+      "services": [
+        "Premium Quality Service",
+        "Expert Consultation",
+        "Fast Delivery & Turnaround",
+        "Customer Support",
+        "Customized Solutions"
+      ],
+      "targetKeywords": [
+        "best My Google Business",
+        "best My Google Business",
+        "top rated service in city",
+        "honest and professional staff",
+        "affordable prices",
+        "highly recommended"
+      ],
+      "usps": [
+        "Experienced Professionals",
+        "Prompt & Reliable Service",
+        "Affordable Pricing",
+        "100% Customer Satisfaction",
+        "Super Clean Setup"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:11:33.805Z",
+      "scanCount": 0,
+      "reviewClickCount": 0,
+      "autoDetected": true
+    },
+    {
+      "id": "biz-1790615435008-845",
+      "slug": "my-google-business-347-1",
+      "name": "My Google Business",
+      "tagline": "Quality Service & Exceptional Customer Experience",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Market",
+      "googleReviewLink": "https://share.google/eaibRuVsw4LnyUe0q",
+      "placeId": "",
+      "services": [
+        "Premium Quality Service",
+        "Expert Consultation",
+        "Fast Delivery & Turnaround",
+        "Customer Support",
+        "Customized Solutions"
+      ],
+      "targetKeywords": [
+        "best My Google Business",
+        "best My Google Business",
+        "top rated service in city",
+        "honest and professional staff",
+        "affordable prices",
+        "highly recommended"
+      ],
+      "usps": [
+        "Experienced Professionals",
+        "Prompt & Reliable Service",
+        "Affordable Pricing",
+        "100% Customer Satisfaction",
+        "Super Clean Setup"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:10:35.008Z",
+      "scanCount": 0,
+      "reviewClickCount": 0
+    },
+    {
+      "id": "biz-1790615426027-894",
+      "slug": "my-google-business-347",
+      "name": "My Google Business",
+      "tagline": "Quality Service & Exceptional Customer Experience",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Market",
+      "googleReviewLink": "https://share.google/eaibRuVsw4LnyUe0q",
+      "placeId": "",
+      "services": [
+        "Premium Quality Service",
+        "Expert Consultation",
+        "Fast Delivery & Turnaround",
+        "Customer Support",
+        "Customized Solutions"
+      ],
+      "targetKeywords": [
+        "best My Google Business",
+        "best My Google Business",
+        "top rated service in city",
+        "honest and professional staff",
+        "affordable prices",
+        "highly recommended"
+      ],
+      "usps": [
+        "Experienced Professionals",
+        "Prompt & Reliable Service",
+        "Affordable Pricing",
+        "100% Customer Satisfaction",
+        "Super Clean Setup"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:10:26.027Z",
+      "scanCount": 0,
+      "reviewClickCount": 0,
+      "autoDetected": true
+    },
+    {
+      "id": "biz-1790615358299-205",
+      "slug": "dr-batra-dental-clinic-chandigarh-875",
+      "name": "Dr Batra Dental Clinic Chandigarh",
+      "tagline": "Advanced Painless Dental & Smile Care",
+      "category": "Dental Clinic & Oral Care",
+      "logo": "🦷",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Market",
+      "googleReviewLink": "https://www.google.com/maps/search/?api=1&query=Dr%20Batra%20Dental%20Clinic%20Chandigarh",
+      "placeId": "",
+      "services": [
+        "Root Canal Treatment",
+        "Teeth Whitening",
+        "Dental Implants",
+        "Invisalign & Braces",
+        "Teeth Cleaning & Scaling",
+        "Tooth Extraction"
+      ],
+      "targetKeywords": [
+        "best Dr Batra Dental Clinic Chandigarh",
+        "best dentist",
+        "painless root canal",
+        "affordable dental clinic",
+        "hygienic dental clinic",
+        "expert dental surgeon"
+      ],
+      "usps": [
+        "Zero Pain Procedure",
+        "Super Clean & Hygienic",
+        "Experienced Specialist Doctors",
+        "Modern Digital Equipment",
+        "Affordable Treatment"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#0ea5e9",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:09:18.299Z",
+      "scanCount": 0,
+      "reviewClickCount": 0,
+      "autoDetected": true
+    },
+    {
+      "id": "biz-1790615092941-428",
+      "slug": "sharthak-studio",
+      "name": "Sharthak Studio",
+      "tagline": "",
+      "category": "General Retail & Store",
+      "logo": "⭐",
+      "phone": "7091876067",
+      "address": "Mirza Galib Road\nDr. Q.H khan",
+      "googleReviewLink": "https://share.google/eaibRuVsw4LnyUe0q",
+      "placeId": "",
+      "services": [
+        "Photography",
+        "wedding",
+        "cinematography"
+      ],
+      "targetKeywords": [
+        "best shop in city",
+        "huge variety and reasonable price",
+        "honest and polite owner",
+        "must visit shop"
+      ],
+      "usps": [
+        "Genuine Products",
+        "Best Discounted Prices",
+        "Fast Home Delivery",
+        "Hassle-Free Exchange"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#000000",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T17:04:52.941Z",
+      "scanCount": 0,
+      "reviewClickCount": 0
+    },
+    {
+      "id": "biz-apex-dental",
+      "slug": "apex-dental-care",
+      "name": "Apex Dental & Implant Centre",
+      "tagline": "Painless Dentistry & Advanced Smile Makeover",
+      "category": "Healthcare & Dental Clinic",
+      "logo": "🦷",
+      "phone": "+91 98765 43210",
+      "address": "B-42, Sector 18, Noida, UP",
+      "googleReviewLink": "https://search.google.com/local/writereview?placeid=ChIJN1t_tDeuEmsRUsoyG83frY4",
+      "placeId": "ChIJN1t_tDeuEmsRUsoyG83frY4",
+      "services": [
+        "Root Canal Treatment",
+        "Teeth Whitening",
+        "Dental Implants",
+        "Invisalign Braces",
+        "Tooth Extraction",
+        "Routine Dental Cleaning"
+      ],
+      "targetKeywords": [
+        "best dentist in Noida",
+        "painless root canal",
+        "affordable dental clinic",
+        "hygienic setup",
+        "friendly doctor and staff",
+        "advanced dental technology"
+      ],
+      "usps": [
+        "Zero Pain Procedure",
+        "Super Clean & Sanitized",
+        "Experienced Specialist Doctors",
+        "No Long Waiting Time",
+        "Pocket Friendly Pricing"
+      ],
+      "brandTone": "Empathetic & Professional",
+      "colorTheme": "#0ea5e9",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T10:00:00Z",
+      "scanCount": 42,
+      "reviewClickCount": 38
+    },
+    {
+      "id": "biz-glamour-salon",
+      "slug": "glamour-touch-salon",
+      "name": "Glamour Touch Luxury Unisex Salon",
+      "tagline": "Premium Hair, Skin & Bridal Studio",
+      "category": "Salon & Beauty Spa",
+      "logo": "✂️",
+      "phone": "+91 91234 56789",
+      "address": "Shop 12, South Extension Part 2, New Delhi",
+      "googleReviewLink": "https://search.google.com/local/writereview?placeid=ChIJ2V-v1GoeDTkREnJgSjF297U",
+      "placeId": "ChIJ2V-v1GoeDTkREnJgSjF297U",
+      "services": [
+        "Keratin & Hair Botox",
+        "Hydra Facial",
+        "Bridal Makeup",
+        "Hair Spa & Styling",
+        "Global Hair Coloring",
+        "Beard Grooming"
+      ],
+      "targetKeywords": [
+        "best luxury salon in South Delhi",
+        "expert hair stylist",
+        "hydra facial glow",
+        "friendly staff",
+        "premium ambiance",
+        "worth every penny"
+      ],
+      "usps": [
+        "Luxury Aesthetic Ambiance",
+        "Certified Celebrity Stylists",
+        "100% Genuine L'Oreal & Olaplex",
+        "Complimentary Coffee & WiFi",
+        "VIP Treatment"
+      ],
+      "brandTone": "Chic, Vibrant & Warm",
+      "colorTheme": "#ec4899",
+      "qrStyle": "rounded",
+      "createdAt": "2026-09-28T11:00:00Z",
+      "scanCount": 89,
+      "reviewClickCount": 76
+    },
+    {
+      "id": "biz-roast-cafe",
+      "slug": "the-daily-roast-cafe",
+      "name": "The Daily Roast Artisan Cafe",
+      "tagline": "Specialty Coffee, Woodfired Pizza & Fresh Bakes",
+      "category": "Cafe & Restaurant",
+      "logo": "☕",
+      "phone": "+91 99887 76655",
+      "address": "Road No. 36, Jubilee Hills, Hyderabad",
+      "googleReviewLink": "https://search.google.com/local/writereview?placeid=ChIJc86Yg3SbyzsRk84xT6Vj1lA",
+      "placeId": "ChIJc86Yg3SbyzsRk84xT6Vj1lA",
+      "services": [
+        "Specialty Pour Over Coffee",
+        "Woodfired Neapolitan Pizza",
+        "Avocado Toast & Brunch",
+        "Handcrafted Desserts & Cheesecakes",
+        "Work-Friendly Seating"
+      ],
+      "targetKeywords": [
+        "best specialty cafe in Jubilee Hills",
+        "amazing hazelnut latte",
+        "authentic woodfired pizza",
+        "aesthetic vibe for work",
+        "quick service and lovely music",
+        "must visit cafe"
+      ],
+      "usps": [
+        "Cozy Aesthetic Ambience",
+        "High-Speed WiFi & Power Plugs",
+        "Artisanal Coffee Beans",
+        "Freshly Baked Daily",
+        "Pet Friendly"
+      ],
+      "brandTone": "Friendly & Cozy",
+      "colorTheme": "#f59e0b",
+      "qrStyle": "classic",
+      "createdAt": "2026-09-28T12:00:00Z",
+      "scanCount": 115,
+      "reviewClickCount": 98
+    }
+  ],
+  "stats": {
+    "totalScans": 246,
+    "totalReviewsClicked": 212,
+    "conversionRate": "86.1%"
+  },
+  "settings": {
+    "geminiApiKey": "",
+    "platformName": "ReviewBoost AI",
+    "supportContact": "+91 98765 00000"
+  }
+}
