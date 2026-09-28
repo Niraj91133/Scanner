@@ -10,28 +10,23 @@ import {
   Star, 
   Edit3, 
   QrCode, 
-  ChevronDown, 
-  ChevronUp, 
   Plus, 
   X,
   Building,
   Tag,
   ShieldCheck,
   Zap,
-  TrendingUp,
   Target,
-  Check,
-  Wifi,
-  Smartphone
+  Check
 } from 'lucide-react';
-import { QRCodeSVG } from 'qrcode.react';
 import { api } from '../services/api';
 
 export default function BusinessForm({ initialData = null, onSave, onCancel }) {
   const [isManualEditMode, setIsManualEditMode] = useState(!!initialData);
   
-  // 1-Step Magic Input
-  const [magicInput, setMagicInput] = useState('');
+  // Clean, dedicated onboarding inputs
+  const [businessNameInput, setBusinessNameInput] = useState('');
+  const [googleLinkInput, setGoogleLinkInput] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [processingStep, setProcessingStep] = useState('');
   
@@ -58,20 +53,35 @@ export default function BusinessForm({ initialData = null, onSave, onCancel }) {
   const [generatedResult, setGeneratedResult] = useState(null);
   const [showAdvancedEditor, setShowAdvancedEditor] = useState(false);
   const [newKeywordInput, setNewKeywordInput] = useState('');
-  const [newServiceInput, setNewServiceInput] = useState('');
 
-  // Sample quick buttons
+  // Quick preset sample buttons
   const sampleInputs = [
-    { label: '🦷 Dental Clinic (Noida)', value: 'Apex Dental & Implant Centre Sector 18 Noida' },
-    { label: '✂️ Luxury Salon (Delhi)', value: 'Glamour Touch Luxury Unisex Salon South Delhi' },
-    { label: '☕ Artisan Cafe (Hyderabad)', value: 'The Daily Roast Artisan Cafe Jubilee Hills' },
-    { label: '🚗 Car Detailing (Mumbai)', value: 'Speedy Wheels Auto Care Studio Bandra Mumbai' }
+    { 
+      name: 'Apex Dental & Implant Centre', 
+      city: 'Noida Sector 18', 
+      link: 'https://search.google.com/local/writereview?placeid=ChIJN1t_tDeuEmsRUsoyG83frY4' 
+    },
+    { 
+      name: 'Glamour Touch Luxury Unisex Salon', 
+      city: 'South Delhi', 
+      link: 'https://search.google.com/local/writereview?placeid=ChIJ2V-v1GoeDTkREnJgSjF297U' 
+    },
+    { 
+      name: 'The Daily Roast Artisan Cafe', 
+      city: 'Jubilee Hills Hyderabad', 
+      link: 'https://search.google.com/local/writereview?placeid=ChIJc86Yg3SbyzsRk84xT6Vj1lA' 
+    }
   ];
 
-  const handleMagicGenerate = async (e) => {
+  const handleApplySample = (sample) => {
+    setBusinessNameInput(`${sample.name} ${sample.city}`);
+    setGoogleLinkInput(sample.link);
+  };
+
+  const handleGenerate = async (e) => {
     e.preventDefault();
-    if (!magicInput.trim()) {
-      alert('Please enter your Google Business Name or Google Maps Link');
+    if (!businessNameInput.trim()) {
+      alert('Please enter your Business Name (e.g. Apex Dental Clinic)');
       return;
     }
 
@@ -79,21 +89,26 @@ export default function BusinessForm({ initialData = null, onSave, onCancel }) {
     setGeneratedResult(null);
 
     try {
-      setProcessingStep('🔍 Resolving URL & Scraping Business Metadata...');
-      await new Promise(r => setTimeout(r, 450));
+      setProcessingStep('🔍 Analyzing Business Category & Services...');
+      await new Promise(r => setTimeout(r, 400));
       
-      setProcessingStep('📍 Detecting Location, Area & High-Intent Search Queries...');
-      await new Promise(r => setTimeout(r, 450));
+      setProcessingStep('🎯 Synthesizing 20+ High-Ranking Local SEO Keywords...');
+      await new Promise(r => setTimeout(r, 400));
 
-      setProcessingStep('🎯 Synthesizing Local SEO Keywords & 5★ Review Logic...');
+      setProcessingStep('✨ Generating 5★ Dynamic Review QR Standee...');
       
-      const result = await api.autoOnboard(magicInput.trim());
+      const result = await api.autoOnboard(businessNameInput.trim(), googleLinkInput.trim());
       
+      // If user provided a specific google link, make sure it is attached
+      if (googleLinkInput.trim()) {
+        result.googleReviewLink = googleLinkInput.trim();
+      }
+
       setFormData(result);
       setGeneratedResult(result);
       setIsProcessing(false);
     } catch (err) {
-      alert('Analysis Error: ' + err.message);
+      alert('Error: ' + err.message);
       setIsProcessing(false);
     }
   };
@@ -145,19 +160,19 @@ export default function BusinessForm({ initialData = null, onSave, onCancel }) {
           marginBottom: 12
         }}>
           <Zap size={16} color="#fbbf24" fill="#fbbf24" />
-          AI LOCAL SEO & AUTO ONBOARDING
+          GOOGLE MY BUSINESS AUTOMATION
         </div>
         
         <h1 style={{ fontSize: '2.4rem', fontWeight: 900, letterSpacing: '-0.02em', marginBottom: 10 }}>
-          Google Business <span className="gradient-text">Instant SEO & QR Scanner</span>
+          Create Your <span className="gradient-text">5★ Google Review Scanner</span>
         </h1>
         
         <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', maxWidth: 680, margin: '0 auto', lineHeight: 1.6 }}>
-          Google Maps link ya Business Name daalein — AI automatically <strong>Services</strong>, <strong>City/Area</strong> aur <strong>High-Ranking Local SEO Keywords</strong> nikaal kar Standee generate kar dega.
+          Apna <strong>Business Name</strong> aur <strong>Google Review Link</strong> daalein — Hamara AI automatically <strong>Local SEO Keywords</strong> aur <strong>QR Standee</strong> ready kar dega!
         </p>
       </div>
 
-      {/* Main 1-Step Magic Input */}
+      {/* Main Onboarding Form */}
       {!isManualEditMode && !generatedResult && (
         <div className="glass-card" style={{
           padding: '36px',
@@ -167,48 +182,72 @@ export default function BusinessForm({ initialData = null, onSave, onCancel }) {
           boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
           marginBottom: 32
         }}>
-          <form onSubmit={handleMagicGenerate}>
-            <label style={{
-              display: 'block',
-              fontSize: '1.05rem',
-              fontWeight: 700,
-              color: '#fff',
-              marginBottom: 12
-            }}>
-              🔗 Paste Google Maps Link OR Enter Business Name:
-            </label>
-
-            <div style={{ position: 'relative', marginBottom: 16 }}>
+          <form onSubmit={handleGenerate}>
+            
+            {/* Field 1: Business Name */}
+            <div className="form-group" style={{ marginBottom: 20 }}>
+              <label style={{ display: 'block', fontSize: '1rem', fontWeight: 700, color: '#fff', marginBottom: 8 }}>
+                🏢 1. Business Name & City:
+              </label>
               <input
                 type="text"
                 className="form-input"
                 style={{
                   fontSize: '1.1rem',
-                  padding: '16px 20px',
-                  borderRadius: 16,
+                  padding: '14px 18px',
+                  borderRadius: 14,
                   border: '2px solid rgba(99, 102, 241, 0.4)',
                   background: 'rgba(15, 23, 42, 0.9)'
                 }}
-                placeholder="e.g. https://maps.app.goo.gl/... OR 'Apex Dental Clinic Sector 18 Noida'"
-                value={magicInput}
-                onChange={(e) => setMagicInput(e.target.value)}
+                placeholder="e.g. Apex Dental Clinic Sector 18 Noida"
+                value={businessNameInput}
+                onChange={(e) => setBusinessNameInput(e.target.value)}
                 disabled={isProcessing}
+                required
                 autoFocus
               />
+              <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: 4, display: 'block' }}>
+                💡 Tip: Naam me City/Area daalne se AI accurate Local SEO Keywords banata hai.
+              </span>
             </div>
 
-            {/* Quick Demo Fill Pills */}
+            {/* Field 2: Google Review / Maps Link */}
+            <div className="form-group" style={{ marginBottom: 24 }}>
+              <label style={{ display: 'block', fontSize: '1rem', fontWeight: 700, color: '#fff', marginBottom: 8 }}>
+                🔗 2. Google My Business Review Link (Where customer should post):
+              </label>
+              <input
+                type="url"
+                className="form-input"
+                style={{
+                  fontSize: '1rem',
+                  padding: '14px 18px',
+                  borderRadius: 14,
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  background: 'rgba(15, 23, 42, 0.8)'
+                }}
+                placeholder="e.g. https://search.google.com/local/writereview?placeid=... OR https://g.page/r/..."
+                value={googleLinkInput}
+                onChange={(e) => setGoogleLinkInput(e.target.value)}
+                disabled={isProcessing}
+              />
+              <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: 4, display: 'block' }}>
+                Scan karne ke baad customer ka review direct isi Google page par open hoga. (Khali chhodne par auto-search link banega).
+              </span>
+            </div>
+
+            {/* Quick Sample Demo Fill */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', marginBottom: 24 }}>
               <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600 }}>Try quick sample:</span>
               {sampleInputs.map((sample, idx) => (
                 <button
                   key={idx}
                   type="button"
-                  onClick={() => setMagicInput(sample.value)}
+                  onClick={() => handleApplySample(sample)}
                   className="chip"
                   style={{ fontSize: '0.8rem', padding: '5px 12px' }}
                 >
-                  {sample.label}
+                  {sample.name}
                 </button>
               ))}
             </div>
@@ -216,7 +255,7 @@ export default function BusinessForm({ initialData = null, onSave, onCancel }) {
             {/* Submit Button */}
             <button
               type="submit"
-              disabled={isProcessing || !magicInput.trim()}
+              disabled={isProcessing || !businessNameInput.trim()}
               className="btn btn-primary btn-lg pulse-glow"
               style={{
                 width: '100%',
@@ -238,7 +277,7 @@ export default function BusinessForm({ initialData = null, onSave, onCancel }) {
               ) : (
                 <>
                   <Sparkles size={22} color="#fbbf24" />
-                  Analyze GMB & Build 5★ QR Automation
+                  Generate 5★ Review QR Standee & SEO
                   <ArrowRight size={20} />
                 </>
               )}
@@ -247,7 +286,7 @@ export default function BusinessForm({ initialData = null, onSave, onCancel }) {
         </div>
       )}
 
-      {/* Instant SEO Analysis Hub & Results */}
+      {/* Generated Result & SEO Strategy View */}
       {generatedResult && (
         <div style={{ animation: 'slideIn 0.4s ease' }}>
           
@@ -262,11 +301,11 @@ export default function BusinessForm({ initialData = null, onSave, onCancel }) {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
                 <div style={{
-                  width: 52,
-                  height: 52,
+                  width: 54,
+                  height: 54,
                   borderRadius: 14,
                   background: 'rgba(16, 185, 129, 0.2)',
-                  fontSize: '1.8rem',
+                  fontSize: '2rem',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
@@ -278,7 +317,7 @@ export default function BusinessForm({ initialData = null, onSave, onCancel }) {
                     {generatedResult.name}
                   </h2>
                   <p style={{ color: '#6ee7b7', fontSize: '0.85rem' }}>
-                    {generatedResult.category} • 📍 {generatedResult.city || 'City Detected'}
+                    {generatedResult.category} • 📍 {generatedResult.city || 'City Set'}
                   </p>
                 </div>
               </div>
@@ -298,77 +337,39 @@ export default function BusinessForm({ initialData = null, onSave, onCancel }) {
             </div>
           </div>
 
-          {/* Interactive SEO Keyword Strategy Board */}
+          {/* Interactive SEO Keywords Board */}
           <div className="glass-card" style={{ padding: '28px', borderRadius: 24, marginBottom: 24 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12, marginBottom: 16 }}>
               <div>
                 <h3 style={{ fontSize: '1.2rem', color: '#fff', display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <Target size={20} color="#fbbf24" /> Local SEO Keywords Strategy
+                  <Target size={20} color="#fbbf24" /> Active Local SEO Keywords ({formData.targetKeywords?.length || 0})
                 </h3>
                 <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-                  Tap any keyword to select/deselect. Selected keywords will be auto-blended into customer reviews for Google Maps ranking.
+                  Customer ke review text me ye keywords automatically blend honge taaki Google Maps par aapki ranking boost ho.
                 </p>
               </div>
-
-              <span className="badge badge-success" style={{ padding: '6px 12px', fontSize: '0.8rem' }}>
-                {formData.targetKeywords?.length || 0} Keywords Active
-              </span>
             </div>
 
-            {/* Keyword Category Groups */}
-            {generatedResult.seoPlan?.keywordCategories ? (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-                {generatedResult.seoPlan.keywordCategories.map((cat, idx) => (
-                  <div key={idx} style={{ background: 'rgba(0,0,0,0.3)', padding: 16, borderRadius: 16 }}>
-                    <h4 style={{ fontSize: '0.85rem', color: '#a5b4fc', marginBottom: 4 }}>{cat.title}</h4>
-                    <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: 10 }}>{cat.description}</p>
-                    
-                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                      {cat.keywords.map((kw, kIdx) => {
-                        const isSelected = formData.targetKeywords?.includes(kw);
-                        return (
-                          <button
-                            key={kIdx}
-                            type="button"
-                            onClick={() => toggleKeyword(kw)}
-                            className={`chip ${isSelected ? 'active' : ''}`}
-                            style={{
-                              fontSize: '0.825rem',
-                              padding: '6px 14px',
-                              ...(isSelected && {
-                                background: 'rgba(16, 185, 129, 0.25)',
-                                borderColor: 'rgba(16, 185, 129, 0.7)',
-                                color: '#6ee7b7'
-                              })
-                            }}
-                          >
-                            {isSelected ? <Check size={14} /> : '+ '}
-                            {kw}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              /* Fallback Keyword Badges */
-              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {formData.targetKeywords?.map((kw, idx) => (
-                  <span key={idx} className="badge badge-success" style={{ padding: '8px 14px', fontSize: '0.85rem' }}>
-                    🎯 {kw}
-                    <X size={14} style={{ cursor: 'pointer', marginLeft: 6 }} onClick={() => toggleKeyword(kw)} />
-                  </span>
-                ))}
-              </div>
-            )}
+            {/* Keyword Chips */}
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 20 }}>
+              {formData.targetKeywords?.map((kw, idx) => (
+                <span 
+                  key={idx} 
+                  className="badge badge-success" 
+                  style={{ padding: '8px 14px', fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: 6 }}
+                >
+                  🎯 {kw}
+                  <X size={14} style={{ cursor: 'pointer' }} onClick={() => toggleKeyword(kw)} />
+                </span>
+              ))}
+            </div>
 
-            {/* Add Custom Keyword Box */}
-            <div style={{ marginTop: 20, display: 'flex', gap: 8 }}>
+            {/* Add Custom Keyword */}
+            <div style={{ display: 'flex', gap: 8 }}>
               <input
                 type="text"
                 className="form-input"
-                placeholder="Add custom SEO keyword (e.g. 'best bridal salon near saket')..."
+                placeholder="Add custom SEO keyword..."
                 value={newKeywordInput}
                 onChange={(e) => setNewKeywordInput(e.target.value)}
                 onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); addCustomKeyword(); } }}
@@ -378,7 +379,7 @@ export default function BusinessForm({ initialData = null, onSave, onCancel }) {
                 onClick={addCustomKeyword}
                 className="btn btn-secondary"
               >
-                <Plus size={16} /> Add Keyword
+                <Plus size={16} /> Add
               </button>
             </div>
           </div>
@@ -389,7 +390,7 @@ export default function BusinessForm({ initialData = null, onSave, onCancel }) {
               type="button"
               onClick={handleSaveAndGo}
               className="btn btn-success btn-lg"
-              style={{ flex: 1, minWidth: 240, fontSize: '1.1rem', padding: '16px' }}
+              style={{ flex: 1, minWidth: 240, fontSize: '1.15rem', padding: '18px' }}
             >
               <QrCode size={20} /> Launch & View QR Standee
             </button>
@@ -400,21 +401,21 @@ export default function BusinessForm({ initialData = null, onSave, onCancel }) {
               className="btn btn-secondary btn-lg"
             >
               <Edit3 size={18} />
-              {showAdvancedEditor ? 'Hide Editor' : 'Edit Business Profile'}
+              {showAdvancedEditor ? 'Hide Details' : 'Edit Google Link / Details'}
             </button>
           </div>
 
         </div>
       )}
 
-      {/* Advanced Full Editor (If toggled or in manual edit mode) */}
+      {/* Advanced Full Editor */}
       {(isManualEditMode || showAdvancedEditor) && (
         <div className="glass-card" style={{ padding: '32px', borderRadius: 24, marginTop: 24 }}>
           
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
             <div>
               <h3 style={{ fontSize: '1.25rem', color: '#fff', display: 'flex', alignItems: 'center', gap: 8 }}>
-                <Edit3 size={20} color="var(--primary)" /> Profile & Review Link Details
+                <Edit3 size={20} color="var(--primary)" /> Profile & Google Review Link
               </h3>
             </div>
             {onCancel && (
@@ -435,7 +436,7 @@ export default function BusinessForm({ initialData = null, onSave, onCancel }) {
             </div>
 
             <div className="form-group">
-              <label className="form-label">Google Review Direct Link / Search Link</label>
+              <label className="form-label">Google Review Direct Link</label>
               <input
                 type="text"
                 className="form-input"

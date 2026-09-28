@@ -27,8 +27,8 @@ const INITIAL_BUSINESSES = [
     targetKeywords: [
       "best dentist in Noida",
       "painless root canal in Noida",
-      "affordable dental clinic",
-      "hygienic setup",
+      "affordable dental clinic in Noida",
+      "hygienic dental setup in Noida",
       "friendly doctor and staff",
       "advanced dental technology"
     ],
@@ -69,7 +69,7 @@ const INITIAL_BUSINESSES = [
     targetKeywords: [
       "best luxury salon in South Delhi",
       "expert hair stylist in Delhi",
-      "hydra facial glow",
+      "hydra facial glow in Delhi",
       "friendly staff",
       "premium ambiance",
       "worth every penny"
@@ -94,7 +94,10 @@ const INITIAL_BUSINESSES = [
 function getLocalDb() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) return JSON.parse(raw);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+    }
   } catch (e) {}
   localStorage.setItem(STORAGE_KEY, JSON.stringify(INITIAL_BUSINESSES));
   return INITIAL_BUSINESSES;
@@ -107,48 +110,72 @@ function saveLocalDb(data) {
 }
 
 // Client-side instant fallback profiler (Zero-Fail on Vercel)
-function clientSideFallbackProfiler(input) {
+export function clientSideFallbackProfiler(input, directGoogleLink = '') {
   const clean = (input || '').trim();
   let name = clean;
+  let googleReviewLink = directGoogleLink || '';
   let city = '';
   
+  // Check if input itself was a URL
+  if (clean.startsWith('http://') || clean.startsWith('https://') || clean.includes('google.') || clean.includes('maps.') || clean.includes('g.page')) {
+    googleReviewLink = clean;
+    // Extract query or path if possible
+    try {
+      const urlObj = new URL(clean.startsWith('http') ? clean : `https://${clean}`);
+      const q = urlObj.searchParams.get('q') || urlObj.searchParams.get('query');
+      if (q && !q.startsWith('http')) {
+        name = decodeURIComponent(q.replace(/\+/g, ' '));
+      } else if (urlObj.pathname.includes('/place/')) {
+        const p = urlObj.pathname.split('/place/')[1];
+        if (p) name = decodeURIComponent(p.split('/')[0].replace(/\+/g, ' '));
+      } else {
+        name = 'My Business Profile';
+      }
+    } catch (e) {
+      name = 'My Business Profile';
+    }
+  }
+
   // Extract potential city
-  const cities = ['delhi', 'noida', 'gurgaon', 'mumbai', 'pune', 'bangalore', 'hyderabad', 'chennai', 'kolkata', 'jaipur', 'chandigarh', 'south delhi', 'rohini', 'patna', 'lucknow'];
+  const cities = ['delhi', 'noida', 'gurgaon', 'mumbai', 'pune', 'bangalore', 'hyderabad', 'chennai', 'kolkata', 'jaipur', 'chandigarh', 'south delhi', 'rohini', 'patna', 'lucknow', 'indore', 'bhopal', 'ahmedabad'];
   for (const c of cities) {
-    if (clean.toLowerCase().includes(c)) {
+    if (name.toLowerCase().includes(c) || clean.toLowerCase().includes(c)) {
       city = c.charAt(0).toUpperCase() + c.slice(1);
       break;
     }
   }
 
+  // Clean name from URLs
+  name = name.replace(/^https?:\/\/[^\s]+/i, 'My Business').trim() || 'My Business Profile';
+
   // Detect category
-  const lower = clean.toLowerCase();
+  const lower = (name + ' ' + clean).toLowerCase();
   let category = 'Professional Services & Business';
   let logo = '⭐';
   let colorTheme = '#6366f1';
   let services = ['High Quality Service', 'Expert Consultation', 'Fast Support', 'Customized Solutions'];
   
-  if (lower.includes('dental') || lower.includes('dentist') || lower.includes('teeth')) {
+  if (lower.includes('dental') || lower.includes('dentist') || lower.includes('teeth') || lower.includes('tooth') || lower.includes('smile')) {
     category = 'Dental Clinic & Oral Healthcare';
     logo = '🦷';
     colorTheme = '#0ea5e9';
     services = ['Root Canal Treatment', 'Teeth Whitening', 'Dental Implants', 'Invisalign & Braces', 'Teeth Cleaning'];
-  } else if (lower.includes('salon') || lower.includes('hair') || lower.includes('spa') || lower.includes('beauty')) {
+  } else if (lower.includes('salon') || lower.includes('hair') || lower.includes('spa') || lower.includes('beauty') || lower.includes('parlour') || lower.includes('makeup')) {
     category = 'Luxury Unisex Salon & Beauty Spa';
     logo = '✂️';
     colorTheme = '#ec4899';
     services = ['Keratin & Hair Botox', 'Hydra Facial & Glow', 'Bridal Makeup', 'Hair Spa & Smoothing', 'Global Hair Color'];
-  } else if (lower.includes('cafe') || lower.includes('coffee') || lower.includes('restaurant') || lower.includes('food')) {
+  } else if (lower.includes('cafe') || lower.includes('coffee') || lower.includes('restaurant') || lower.includes('food') || lower.includes('pizza') || lower.includes('bakery')) {
     category = 'Cafe, Restaurant & Dining';
     logo = '☕';
     colorTheme = '#f59e0b';
     services = ['Specialty Coffee', 'Woodfired Pizza', 'Artisanal Pasta', 'Fresh Desserts', 'Brunch & Shakes'];
-  } else if (lower.includes('gym') || lower.includes('fitness') || lower.includes('workout')) {
+  } else if (lower.includes('gym') || lower.includes('fitness') || lower.includes('workout') || lower.includes('crossfit')) {
     category = 'Gym & Fitness Studio';
     logo = '💪';
     colorTheme = '#10b981';
     services = ['Personal Training', 'HIIT & Weight Loss', 'Strength Building', 'Diet & Nutrition'];
-  } else if (lower.includes('car') || lower.includes('auto') || lower.includes('garage')) {
+  } else if (lower.includes('car') || lower.includes('auto') || lower.includes('garage') || lower.includes('repair') || lower.includes('mechanic')) {
     category = 'Auto Garage & Car Detailing';
     logo = '🚗';
     colorTheme = '#ef4444';
@@ -189,6 +216,10 @@ function clientSideFallbackProfiler(input) {
 
   const baseSlug = name.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-') || 'business';
 
+  if (!googleReviewLink) {
+    googleReviewLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + ' ' + loc)}`;
+  }
+
   const newBiz = {
     id: `biz-${Date.now()}`,
     slug: `${baseSlug}-${Math.floor(100 + Math.random() * 900)}`,
@@ -199,7 +230,7 @@ function clientSideFallbackProfiler(input) {
     phone: '+91 98765 43210',
     address: city ? `Main Market, ${city}` : 'City Center',
     city,
-    googleReviewLink: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + ' ' + loc)}`,
+    googleReviewLink,
     placeId: '',
     services,
     targetKeywords,
@@ -269,16 +300,15 @@ export const api = {
     return list[0];
   },
 
-  async autoOnboard(input) {
+  async autoOnboard(input, googleLink = '') {
     try {
       const res = await fetch(`${API_BASE}/auto-onboard`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ input })
+        body: JSON.stringify({ input, googleLink })
       });
       if (res.ok) {
         const data = await res.json();
-        // Also mirror in local storage
         const list = getLocalDb();
         list.unshift(data);
         saveLocalDb(list);
@@ -287,7 +317,7 @@ export const api = {
     } catch (e) {}
 
     // Instant zero-fail client-side profiler on Vercel
-    return clientSideFallbackProfiler(input);
+    return clientSideFallbackProfiler(input, googleLink);
   },
 
   async createBusiness(data) {
@@ -310,7 +340,7 @@ export const api = {
     const newBiz = {
       ...data,
       id: data.id || `biz-${Date.now()}`,
-      slug: data.slug || data.name.toLowerCase().replace(/\s+/g, '-') + '-' + Math.floor(100 + Math.random() * 900),
+      slug: data.slug || (data.name || 'biz').toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-') + '-' + Math.floor(100 + Math.random() * 900),
       createdAt: new Date().toISOString(),
       scanCount: 0,
       reviewClickCount: 0
@@ -398,20 +428,20 @@ export const api = {
 
     // Client side generator
     const kw = (business.targetKeywords && business.targetKeywords[0]) || 'best service in city';
-    const usp = (business.usps && business.usps[0]) || 'experienced doctors and staff';
+    const usp = (business.usps && business.usps[0]) || 'experienced staff and hygienic facility';
     return {
       reviews: [
         {
           id: 'detailed',
-          title: '🌟 Detailed Review',
+          title: '🌟 Detailed 5★ Review',
           badge: 'Most Popular',
-          text: `Had a wonderful 5-star experience at ${business.name}! I visited for ${selectedService || 'services'} and was genuinely impressed. Truly one of the ${kw}. The entire team ensures ${usp}. Highly recommended!`
+          text: `Had an exceptional 5-star experience at ${business.name}! Visited for ${selectedService || 'services'} and was genuinely impressed by their professionalism. Truly one of the ${kw}. The team ensures ${usp}. Highly recommended to everyone!`
         },
         {
           id: 'crisp',
-          title: '⚡ Quick Review',
+          title: '⚡ Quick 5★ Review',
           badge: 'Quick Post',
-          text: `Outstanding service at ${business.name}! Got my ${selectedService || 'treatment'} done and the results exceeded expectations. Loved their ${usp}. Definitely ${kw}. 10/10 recommendation!`
+          text: `Outstanding service at ${business.name}! Got my ${selectedService || 'treatment'} done and the results exceeded expectations. Loved their ${usp}. Definitely ${kw}. 10/10 recommendation, will visit again!`
         }
       ]
     };
