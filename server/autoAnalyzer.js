@@ -23,7 +23,7 @@ export async function scrapeUrlMetadata(targetUrl) {
   try {
     const formattedUrl = targetUrl.startsWith('http') ? targetUrl : `https://${targetUrl}`;
     
-    // Fetch with redirect follow and standard browser headers
+    // Fetch with 3.5s timeout and standard browser headers
     const res = await fetch(formattedUrl, {
       method: 'GET',
       headers: {
@@ -31,7 +31,8 @@ export async function scrapeUrlMetadata(targetUrl) {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
         'Accept-Language': 'en-US,en;q=0.9,hi;q=0.8'
       },
-      redirect: 'follow'
+      redirect: 'follow',
+      signal: AbortSignal.timeout(3500)
     });
 
     const finalUrl = res.url;
