@@ -5,12 +5,12 @@ import {
   Check, 
   Copy, 
   ExternalLink, 
-  RotateCw, 
   ShieldCheck, 
   MapPin, 
   Zap,
   CheckCircle2,
-  ThumbsUp
+  ArrowRight,
+  RotateCw
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { api } from '../services/api';
@@ -19,11 +19,11 @@ export default function CustomerReviewView({ business, onBackToAdmin }) {
   if (!business) {
     return (
       <div style={{ padding: '60px 20px', textAlign: 'center', color: '#fff' }}>
-        <h2>No Business Selected</h2>
-        <p style={{ color: 'var(--text-secondary)', marginTop: 8 }}>Please select a business from the admin dashboard to preview.</p>
+        <h2>Loading Review Engine...</h2>
+        <p style={{ color: 'var(--text-secondary)', marginTop: 8 }}>Please wait while we connect your business profile.</p>
         {onBackToAdmin && (
           <button onClick={onBackToAdmin} className="btn btn-primary" style={{ marginTop: 20 }}>
-            Back to Admin
+            Back to Dashboard
           </button>
         )}
       </div>
@@ -35,6 +35,19 @@ export default function CustomerReviewView({ business, onBackToAdmin }) {
   const [reviewText, setReviewText] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
   const [copiedSuccess, setCopiedSuccess] = useState(false);
+  const [autoRedirecting, setAutoRedirecting] = useState(false);
+  const [countdown, setCountdown] = useState(null);
+
+  // Determine direct Google Review target link
+  const getGoogleReviewUrl = () => {
+    if (business.googleReviewLink && business.googleReviewLink.startsWith('http')) {
+      return business.googleReviewLink;
+    }
+    if (business.placeId) {
+      return `https://search.google.com/local/writereview?placeid=${business.placeId}`;
+    }
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(business.name + ' ' + (business.city || ''))}`;
+  };
 
   // Track scan on load
   useEffect(() => {
@@ -54,10 +67,9 @@ export default function CustomerReviewView({ business, onBackToAdmin }) {
         setReviewText(res.reviews[0].text);
       }
     } catch (err) {
-      // Fallback
-      const kw = (business.targetKeywords && business.targetKeywords[0]) || 'best service';
-      const usp = (business.usps && business.usps[0]) || 'great experience';
-      setReviewText(`Had a wonderful 5-star experience at ${business.name}! Took their ${chosenService} and was genuinely impressed. Truly one of the ${kw}. The team ensures ${usp}. Highly recommended!`);
+      const kw = (business.targetKeywords && business.targetKeywords[0]) || 'best service in city';
+      const usp = (business.usps && business.usps[0]) || 'great experience and staff';
+      setReviewText(`Had an exceptional 5-star experience at ${business.name}! I opted for ${chosenService} and was genuinely impressed. Truly one of the ${kw}. The team ensures ${usp}. Highly recommended!`);
     } finally {
       setIsGenerating(false);
     }
@@ -72,37 +84,37 @@ export default function CustomerReviewView({ business, onBackToAdmin }) {
     loadReview(service);
   };
 
-  const handle1TapPost = async () => {
+  const handleCopyAndRedirect = async () => {
     // 1. Copy text to clipboard
     try {
       await navigator.clipboard.writeText(reviewText);
     } catch (err) {
-      console.warn('Clipboard copy error:', err);
+      console.warn('Clipboard copy fallback:', err);
     }
 
-    // 2. Track click
+    // 2. Track click in analytics
     api.trackReviewClick(business.slug || business.id);
 
-    // 3. Show confetti
+    // 3. Trigger Confetti
     setCopiedSuccess(true);
     confetti({
-      particleCount: 140,
-      spread: 80,
+      particleCount: 120,
+      spread: 70,
       origin: { y: 0.6 }
     });
 
-    // 4. Open direct Google review writing box
-    const targetUrl = business.googleReviewLink || `https://search.google.com/local/writereview?placeid=${business.placeId || 'ChIJN1t_tDeuEmsRUsoyG83frY4'}`;
+    // 4. Redirect straight to the customer's Google My Business Review box
+    const targetUrl = getGoogleReviewUrl();
 
     setTimeout(() => {
-      window.open(targetUrl, '_blank', 'noopener,noreferrer');
-    }, 600);
+      window.location.href = targetUrl;
+    }, 800);
   };
 
   return (
     <div style={{
       maxWidth: 480,
-      margin: '16px auto 60px',
+      margin: '20px auto 60px',
       padding: '0 16px',
       fontFamily: 'var(--font-body)'
     }}>
@@ -119,22 +131,22 @@ export default function CustomerReviewView({ business, onBackToAdmin }) {
         {/* Business Header */}
         <div style={{ textAlign: 'center', paddingBottom: 18, borderBottom: '1px solid var(--border-subtle)' }}>
           <div style={{
-            width: 68,
-            height: 68,
-            borderRadius: 20,
+            width: 72,
+            height: 72,
+            borderRadius: 22,
             margin: '0 auto 12px',
             background: `linear-gradient(135deg, ${business.colorTheme || '#6366f1'}, #4338ca)`,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: '2.4rem',
+            fontSize: '2.5rem',
             boxShadow: '0 8px 25px rgba(99, 102, 241, 0.4)'
           }}>
             {business.logo || '⭐'}
           </div>
 
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
-            <h1 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.02em' }}>
+            <h1 style={{ fontSize: '1.45rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.02em' }}>
               {business.name}
             </h1>
             <ShieldCheck size={18} color="#38bdf8" />
@@ -149,8 +161,8 @@ export default function CustomerReviewView({ business, onBackToAdmin }) {
             display: 'inline-flex',
             alignItems: 'center',
             gap: 6,
-            background: 'rgba(245, 158, 11, 0.12)',
-            border: '1px solid rgba(245, 158, 11, 0.3)',
+            background: 'rgba(245, 158, 11, 0.15)',
+            border: '1px solid rgba(245, 158, 11, 0.35)',
             padding: '4px 14px',
             borderRadius: 999
           }}>
@@ -161,11 +173,11 @@ export default function CustomerReviewView({ business, onBackToAdmin }) {
           </div>
         </div>
 
-        {/* Optional Service Switcher Chips */}
+        {/* Service Selector Chips (Optional) */}
         {business.services && business.services.length > 0 && (
           <div style={{ marginTop: 18 }}>
             <label style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--text-muted)', display: 'block', marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-              SELECT SERVICE (OPTIONAL):
+              CHOOSE SERVICE (AUTO-UPDATES REVIEW):
             </label>
             <div style={{ display: 'flex', gap: 6, overflowX: 'auto', paddingBottom: 4 }}>
               {business.services.map((service, idx) => (
@@ -184,7 +196,7 @@ export default function CustomerReviewView({ business, onBackToAdmin }) {
           </div>
         )}
 
-        {/* Ready-to-Post Review Box */}
+        {/* Ready-to-Post Keyword-Rich Review Draft */}
         <div style={{ marginTop: 18 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
             <label style={{ fontSize: '0.85rem', fontWeight: 700, color: '#a5b4fc', display: 'flex', alignItems: 'center', gap: 6 }}>
@@ -198,7 +210,7 @@ export default function CustomerReviewView({ business, onBackToAdmin }) {
               disabled={isGenerating}
             >
               <RotateCw size={11} className={isGenerating ? 'spin-anim' : ''} />
-              {isGenerating ? 'Generating...' : 'Shuffle'}
+              {isGenerating ? 'Generating...' : 'Regenerate'}
             </button>
           </div>
 
@@ -236,13 +248,13 @@ export default function CustomerReviewView({ business, onBackToAdmin }) {
         <div style={{ marginTop: 22 }}>
           <button
             type="button"
-            onClick={handle1TapPost}
+            onClick={handleCopyAndRedirect}
             className="btn btn-gold btn-lg pulse-glow"
             style={{
               width: '100%',
-              fontSize: '1.12rem',
+              fontSize: '1.15rem',
               fontWeight: 900,
-              padding: '16px 20px',
+              padding: '18px 20px',
               borderRadius: 18,
               display: 'flex',
               alignItems: 'center',
@@ -253,11 +265,11 @@ export default function CustomerReviewView({ business, onBackToAdmin }) {
           >
             <Star size={22} fill="#111827" />
             Post 5★ Review on Google
-            <ExternalLink size={18} />
+            <ArrowRight size={20} />
           </button>
         </div>
 
-        {/* Instant Guide on Tap */}
+        {/* Instant Guide Banner on Tap */}
         {copiedSuccess && (
           <div style={{
             marginTop: 16,
@@ -269,10 +281,10 @@ export default function CustomerReviewView({ business, onBackToAdmin }) {
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
               <CheckCircle2 size={18} color="#34d399" />
-              <strong style={{ color: '#6ee7b7', fontSize: '0.9rem' }}>Review Copied!</strong>
+              <strong style={{ color: '#6ee7b7', fontSize: '0.92rem' }}>Review Copied to Clipboard!</strong>
             </div>
-            <p style={{ fontSize: '0.8rem', color: '#d1fae5', lineHeight: 1.4 }}>
-              Google box is opening. Just <strong>tap 5 Stars</strong> and <strong>Paste (Ctrl+V / Long-Press)</strong> to post!
+            <p style={{ fontSize: '0.82rem', color: '#d1fae5', lineHeight: 1.4 }}>
+              Opening <strong>{business.name}</strong> on Google Maps. Simply <strong>tap 5 Stars</strong> and <strong>Paste (Long-press / Ctrl+V)</strong> your review!
             </p>
           </div>
         )}
@@ -280,7 +292,7 @@ export default function CustomerReviewView({ business, onBackToAdmin }) {
         {/* Footer */}
         <div style={{ marginTop: 20, textAlign: 'center', borderTop: '1px solid var(--border-subtle)', paddingTop: 14 }}>
           <p style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>
-            ⚡ 1-Tap Google Review Automation • Takes 2 seconds
+            ⚡ 1-Tap Google Review Automation for <strong>{business.name}</strong>
           </p>
         </div>
 
@@ -289,7 +301,7 @@ export default function CustomerReviewView({ business, onBackToAdmin }) {
       {onBackToAdmin && (
         <div style={{ textAlign: 'center', marginTop: 16 }}>
           <button onClick={onBackToAdmin} className="btn btn-secondary btn-sm">
-            ← Exit Simulator to Admin Dashboard
+            ← Exit to Dashboard
           </button>
         </div>
       )}

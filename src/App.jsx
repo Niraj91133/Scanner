@@ -42,12 +42,33 @@ export default function App() {
         setSelectedBusiness(bizData[0]);
       }
 
-      // Check if URL specifies a business slug
+      // Check if URL specifies a business slug or encoded params
       const urlParams = new URLSearchParams(window.location.search);
-      const bizParam = urlParams.get('business') || urlParams.get('review') || urlParams.get('r') || urlParams.get('preview');
+      const bizParam = urlParams.get('business') || urlParams.get('review') || urlParams.get('r') || urlParams.get('b') || urlParams.get('preview');
+      const nameParam = urlParams.get('name');
+      const linkParam = urlParams.get('link');
+      const catParam = urlParams.get('cat');
+      const kwParam = urlParams.get('kw');
       
-      if (bizParam) {
-        const found = bizData.find(b => b.slug === bizParam || b.id === bizParam);
+      if (bizParam || nameParam) {
+        let found = bizData.find(b => b.slug === bizParam || b.id === bizParam);
+        
+        // If not found in local array but encoded in QR URL, construct instantly
+        if (!found && (nameParam || linkParam)) {
+          found = {
+            id: `biz-${bizParam || 'custom'}`,
+            slug: bizParam || 'custom',
+            name: nameParam ? decodeURIComponent(nameParam) : 'Google Business',
+            googleReviewLink: linkParam ? decodeURIComponent(linkParam) : '',
+            category: catParam ? decodeURIComponent(catParam) : 'Professional Services',
+            targetKeywords: kwParam ? decodeURIComponent(kwParam).split(',').filter(Boolean) : [`best ${nameParam || 'service'}`],
+            services: ['Quality Service', 'Expert Consultation', 'Customer Care'],
+            usps: ['Experienced Staff', 'Clean Setup', 'Friendly Team'],
+            brandTone: 'Friendly & Professional',
+            colorTheme: '#6366f1'
+          };
+        }
+
         if (found) {
           setSelectedBusiness(found);
           setIsDirectScanMode(true);

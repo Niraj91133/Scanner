@@ -51,8 +51,8 @@ export default function QrStandeeGenerator({ businesses, selectedBusiness, onSel
     );
   }
 
-  // The actual URL embedded in the QR code (Points to Wi-Fi IP so phone can open it!)
-  const scanUrl = `${networkBaseUrl}/?business=${currentBiz.slug || currentBiz.id}`;
+  // Universal URL embedded in QR Code (Carries business identity so any phone opens the exact business!)
+  const scanUrl = `${networkBaseUrl}/?b=${currentBiz.slug || currentBiz.id}&name=${encodeURIComponent(currentBiz.name || '')}&link=${encodeURIComponent(currentBiz.googleReviewLink || '')}&cat=${encodeURIComponent(currentBiz.category || '')}&kw=${encodeURIComponent((currentBiz.targetKeywords || []).slice(0, 4).join(','))}`;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(scanUrl);
