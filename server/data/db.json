@@ -1,6 +1,113 @@
 {
   "businesses": [
     {
+      "id": "biz-1790620207673-63",
+      "slug": "sharthak-studio-554",
+      "name": "Sharthak Studio",
+      "tagline": "Excellence in Customer Satisfaction & Premium Service",
+      "category": "Professional Services & Business",
+      "logo": "⭐",
+      "phone": "+91 98765 43210",
+      "address": "City Center, Main Road",
+      "city": "",
+      "googleReviewLink": "https://www.google.com/search?sca_esv=c2d1ccc686b89df9&biw=1920&bih=945&sxsrf=APpeQns6v28XAkQRO3rxzXqsPZqUm1uQsQ:1790615045017&kgmid=/g/11zk4nnvpp&q=Sharthak+Studio&shem=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie&shndl=30&source=sh/x/loc/uni/m1/1&kgs=79247ff235ee77f9&utm_source=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpie,sh/x/loc/uni/m1/1",
+      "placeId": "",
+      "services": [
+        "High Quality Service Delivery",
+        "Expert Consultation & Advice",
+        "Fast & Reliable Support",
+        "Customized Client Solutions",
+        "Hassle-Free Experience"
+      ],
+      "targetKeywords": [
+        "best Professional Services & Business in your city",
+        "High Quality Service Delivery in your city",
+        "Expert Consultation & Advice in your city",
+        "top rated Professional Services & Business near me",
+        "best Sharthak Studio your city",
+        "affordable Professional Services & Business in your city"
+      ],
+      "seoPlan": {
+        "businessName": "Sharthak Studio",
+        "category": "Professional Services & Business",
+        "detectedCity": "your city",
+        "seoScore": "94/100",
+        "keywordCategories": [
+          {
+            "type": "location",
+            "title": "📍 Local High-Intent Keywords (Rank on Google Maps 3-Pack)",
+            "description": "These keywords trigger Google Maps local pack when nearby customers search.",
+            "keywords": [
+              "best Professional Services & Business in your city",
+              "Professional Services & Business near me",
+              "top rated Professional Services & Business in your city",
+              "affordable Professional Services & Business in your city",
+              "best Sharthak Studio your city"
+            ]
+          },
+          {
+            "type": "service",
+            "title": "🎯 High-Converting Service Keywords (Customer Buying Intent)",
+            "description": "Keywords people search right before booking a service.",
+            "keywords": [
+              "High Quality Service Delivery in your city",
+              "Expert Consultation & Advice in your city",
+              "Fast & Reliable Support in your city",
+              "Customized Client Solutions in your city",
+              "Hassle-Free Experience in your city",
+              "best High Quality Service Delivery near me",
+              "best Expert Consultation & Advice near me",
+              "best Fast & Reliable Support near me"
+            ]
+          },
+          {
+            "type": "reputation",
+            "title": "⭐ 5-Star Trust & Review Keywords (Natural Review Blend)",
+            "description": "Blended naturally inside customer reviews to boost trust signals.",
+            "keywords": [
+              "experienced specialist staff",
+              "painless and hygienic treatment",
+              "100% genuine and honest service",
+              "pocket friendly and affordable pricing",
+              "highly recommended in your city"
+            ]
+          },
+          {
+            "type": "longtail",
+            "title": "🚀 Long-Tail Local Queries (Low Competition, High Ranking)",
+            "description": "Specific questions and detailed queries that rank rapidly.",
+            "keywords": [
+              "which is the best Professional Services & Business in your city",
+              "trusted Professional Services & Business with 5 star reviews",
+              "famous Professional Services & Business in your city"
+            ]
+          }
+        ],
+        "recommendedSelection": [
+          "best Professional Services & Business in your city",
+          "High Quality Service Delivery in your city",
+          "Expert Consultation & Advice in your city",
+          "top rated Professional Services & Business near me",
+          "best Sharthak Studio your city",
+          "affordable Professional Services & Business in your city"
+        ]
+      },
+      "usps": [
+        "Experienced Industry Experts",
+        "Prompt & On-Time Execution",
+        "Transparent Pricing",
+        "100% Customer Satisfaction Guaranteed"
+      ],
+      "brandTone": "Friendly & Professional",
+      "colorTheme": "#6366f1",
+      "qrStyle": "dots",
+      "createdAt": "2026-09-28T18:30:07.673Z",
+      "scanCount": 0,
+      "reviewClickCount": 0,
+      "autoDetected": true,
+      "scrapedUrl": "https://share.google/eaibRuVsw4LnyUe0q"
+    },
+    {
       "id": "biz-1790619469916-329",
       "slug": "sharthak-studio-200-1",
       "name": "Sharthak Studio",
